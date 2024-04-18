@@ -1,8 +1,10 @@
-import React from 'react'
-
+import { useProducts } from "../context/ProductsContext";
 const Ventas = () => {
+  const obj = useProducts();
+console.log(obj)
+
   return (
-    <div>Ventas</div>
+    <div>{obj.saludo}</div>
   )
 }
 

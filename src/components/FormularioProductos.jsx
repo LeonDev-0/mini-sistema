@@ -9,6 +9,8 @@ const FormularioProductos = () => {
     const hanledSubmit = async (e)=>{
         e.preventDefault()
         try {
+            const user = await supabase.auth.getUser();
+            console.log(user);
             const {data,error}=await supabase
                 .from('productos')
                 .insert([{nombre,descripcion}]);
@@ -32,8 +34,8 @@ const FormularioProductos = () => {
   return (
     <form onSubmit={hanledSubmit}>
         <h1>Registro de nuevos Productos</h1>
-        <input type="text" onChange={(e)=>{setNombre(e.target.value)}}/>
-        <input type="text" onChange={(e)=>{setDescripcion(e.target.value)}}/>
+        <input type="text"  value={nombre} onChange={(e)=>{setNombre(e.target.value)}}/>
+        <input type="text" value={descripcion} onChange={(e)=>{setDescripcion(e.target.value)}}/>
         <button>Guardar</button>
 
     </form>
