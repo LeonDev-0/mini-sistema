@@ -1,10 +1,20 @@
 import { useProducts } from "../context/ProductsContext";
-const Ventas = () => {
-  const obj = useProducts();
-console.log(obj)
+import { useStoreProducts } from "../store/store";
+import { shallow } from "zustand/shallow";
 
+const Ventas = () => {
+  const {productos} = useProducts();
+  const {contador,title} = useStoreProducts((state)=>({
+    contador:state.contador,
+    title:state.title
+  }),shallow)
+  const {increment} = useStoreProducts();
   return (
-    <div>{obj.saludo}</div>
+    <div>
+      <h1>{title}:{contador}</h1>
+      <button
+      onClick={()=>{increment(1)}}>incrementar</button>
+    </div>
   )
 }
 

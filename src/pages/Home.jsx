@@ -16,9 +16,9 @@ const Home = () => {
     <div>
         <FormularioProductos/>
         <DisplayData/>
-        {/* <button onClick={()=>{supabase.auth.signOut()}}> */}
+        <button onClick={()=>{supabase.auth.signOut()}}>
             Cerrar session
-        {/* </button> */}
+        </button>
     </div>
   )
 }
