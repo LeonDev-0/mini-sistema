@@ -9,6 +9,7 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    //comentario agregado
     const getUserSession = async () => {
       try {
         const session = await supabase.auth.getSession();
