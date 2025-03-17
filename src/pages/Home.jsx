@@ -9,6 +9,7 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    //qu e es stof
     //comentario agregado
     const getUserSession = async () => {
       try {
