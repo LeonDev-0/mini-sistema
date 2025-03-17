@@ -3,6 +3,7 @@ import { useStoreProducts } from "../store/store";
 import { shallow } from "zustand/shallow";
 
 const Ventas = () => {
+
   const {productos} = useProducts();
   const {contador,title} = useStoreProducts((state)=>({
     contador:state.contador,
