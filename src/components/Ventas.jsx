@@ -4,6 +4,7 @@ import { shallow } from "zustand/shallow";
 
 const Ventas = () => {
 
+const frutas = ["Banana","Manzana","Kiwi","Lima","Mango","Melon","Papaya","Tomate","Mango"]
   const {productos} = useProducts();
   const {contador,title} = useStoreProducts((state)=>({
     contador:state.contador,

@@ -5,6 +5,7 @@ export const useStoreProducts = create((set)=>({
     increment:(value)=> set((state)=>({
         contador:state.contador+value
 
+
     })),
 }))
 // agrege un comentario al final
