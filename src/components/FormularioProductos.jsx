@@ -3,6 +3,8 @@ import { supabase } from '../supabase/supabase';
 
 const FormularioProductos = () => {
 
+const frutas = ['manzana','pera','banana']
+
     const [nombre, setNombre]=useState("");
     const [descripcion, setDescripcion]=useState("");
     const personas = ['sandro','pedro','marcos','betO','samuel']
