@@ -5,6 +5,7 @@ const FormularioProductos = () => {
 
     const [nombre, setNombre]=useState("");
     const [descripcion, setDescripcion]=useState("");
+    const personas = ['sandro','pedro','marcos','betO','samuel']
 
     const hanledSubmit = async (e)=>{
         e.preventDefault()
